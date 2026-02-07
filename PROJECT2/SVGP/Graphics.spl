@@ -1,0 +1,15 @@
+[Inputs]
+clk
+rst
+P1up
+P1dn
+P2up
+P2dn
+hpos
+vpos
+[Outputs]
+graphics_on
+hit
+miss
+=rgb[2:0]=
+[BiDir]

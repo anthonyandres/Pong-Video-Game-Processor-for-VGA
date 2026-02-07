@@ -1,0 +1,28 @@
+Command line:
+   pongTest_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  49458
+
+Mon Nov 27 11:40:05 2023
+
+
+ Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 214.061 Meg
+
+ Total Signals          : 36
+ Total Nets             : 46
+ Total Signal Drivers   : 19
+ Total Blocks           : 5
+ Total Primitive Blocks : 4
+ Total Processes        : 7
+ Total Traceable Variables  : 19
+ Total Scalar Nets and Variables : 433
+
+ Total Simulation Time: 143.18 sec
+
+ Current Memory Usage: 289.559 Meg
+
+Mon Nov 27 12:14:07 2023
+

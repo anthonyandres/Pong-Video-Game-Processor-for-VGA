@@ -1,0 +1,16 @@
+//! **************************************************************************
+// Written by: Map O.87xd on Fri Nov 24 12:43:36 2023
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "C9" LEVEL 1;
+COMP "P1dn" LOCATE = SITE "H18" LEVEL 1;
+COMP "P2dn" LOCATE = SITE "L13" LEVEL 1;
+COMP "hsync" LOCATE = SITE "C5" LEVEL 1;
+COMP "P1up" LOCATE = SITE "N17" LEVEL 1;
+COMP "P2up" LOCATE = SITE "L14" LEVEL 1;
+COMP "vsync" LOCATE = SITE "D5" LEVEL 1;
+COMP "rst" LOCATE = SITE "D18" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

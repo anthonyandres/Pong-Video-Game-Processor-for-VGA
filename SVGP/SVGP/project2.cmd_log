@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/SVGP/SVGP/project2.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/SVGP/SVGP/project2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 "project2.ngc" project2.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o project2_map.ncd project2.ngd project2.pcf 
+par -w -intstyle ise -ol high -t 1 project2_map.ncd project2.ncd project2.pcf 

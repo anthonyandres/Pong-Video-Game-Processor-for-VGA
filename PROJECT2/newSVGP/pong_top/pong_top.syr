@@ -1,0 +1,589 @@
+Release 13.4 - xst O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Reading design: pong_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pong_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pong_top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : pong_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.vhd" in Library work.
+Architecture behavioral of Entity videocontroller is up to date.
+Compiling vhdl file "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/Graphics.vhd" in Library work.
+Architecture behavioral of Entity graphics is up to date.
+Compiling vhdl file "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/pong_top.vhd" in Library work.
+Entity <pong_top> compiled.
+Entity <pong_top> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <pong_top> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <VideoController> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Graphics> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <pong_top> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/pong_top.vhd" line 119: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <clk>
+Entity <pong_top> analyzed. Unit <pong_top> generated.
+
+Analyzing Entity <VideoController> in library <work> (Architecture <behavioral>).
+Entity <VideoController> analyzed. Unit <VideoController> generated.
+
+Analyzing Entity <Graphics> in library <work> (Architecture <behavioral>).
+Entity <Graphics> analyzed. Unit <Graphics> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <VideoController>.
+    Related source file is "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.vhd".
+WARNING:Xst:1780 - Signal <RGB> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <vsync>.
+    Found 1-bit register for signal <hsync>.
+    Found 1-bit register for signal <bright>.
+    Found 32-bit comparator lessequal for signal <bright$cmp_le0000> created at line 222.
+    Found 32-bit comparator lessequal for signal <bright$cmp_le0001> created at line 222.
+    Found 1-bit register for signal <clk25>.
+    Found 32-bit up counter for signal <hpos>.
+    Found 32-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 194.
+    Found 32-bit comparator less for signal <hsync$cmp_lt0000> created at line 194.
+    Found 32-bit up counter for signal <vpos>.
+    Found 32-bit comparator greatequal for signal <vsync$cmp_ge0000> created at line 208.
+    Found 32-bit comparator less for signal <vsync$cmp_lt0000> created at line 208.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <VideoController> synthesized.
+
+
+Synthesizing Unit <Graphics>.
+    Related source file is "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/Graphics.vhd".
+WARNING:Xst:1305 - Output <graphics_on> is never assigned. Tied to value 0.
+WARNING:Xst:653 - Signal <twobar_y_top> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000.
+WARNING:Xst:653 - Signal <twobar_y_bottom> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000.
+WARNING:Xst:653 - Signal <ball_on> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+    Found 10-bit register for signal <ball_vx_reg>.
+    Found 10-bit comparator less for signal <ball_vx_reg$cmp_gt0000> created at line 149.
+    Found 10-bit comparator greater for signal <ball_vx_reg$cmp_gt0001> created at line 149.
+    Found 10-bit comparator greater for signal <ball_vx_reg$cmp_gt0002> created at line 149.
+    Found 10-bit comparator greater for signal <ball_vx_reg$cmp_gt0003> created at line 149.
+    Found 10-bit register for signal <ball_vy_reg>.
+    Found 10-bit subtractor for signal <ball_x_r>.
+    Found 10-bit adder for signal <ball_x_r$addsub0000> created at line 128.
+    Found 10-bit up accumulator for signal <ball_x_reg>.
+    Found 10-bit subtractor for signal <ball_y_bottom>.
+    Found 10-bit adder for signal <ball_y_bottom$addsub0000> created at line 129.
+    Found 10-bit up accumulator for signal <ball_y_reg>.
+    Found 10-bit comparator greater for signal <miss$cmp_gt0000> created at line 147.
+    Found 10-bit comparator greater for signal <miss$cmp_gt0001> created at line 161.
+    Found 10-bit comparator greatequal for signal <miss$cmp_le0000> created at line 149.
+    Found 10-bit comparator lessequal for signal <miss$cmp_le0001> created at line 149.
+    Found 10-bit comparator lessequal for signal <miss$cmp_le0002> created at line 149.
+    Found 10-bit comparator lessequal for signal <miss$cmp_le0003> created at line 149.
+    Found 10-bit comparator greatequal for signal <miss$cmp_le0004> created at line 156.
+    Found 10-bit comparator lessequal for signal <miss$cmp_le0005> created at line 156.
+    Found 10-bit comparator lessequal for signal <miss$cmp_le0007> created at line 156.
+    Found 10-bit comparator less for signal <miss$cmp_lt0000> created at line 146.
+    Found 10-bit comparator greatequal for signal <onebar_on$cmp_le0000> created at line 99.
+    Found 10-bit comparator lessequal for signal <onebar_on$cmp_le0001> created at line 99.
+    Found 10-bit subtractor for signal <onebar_y_bottom>.
+    Found 10-bit adder for signal <onebar_y_bottom$addsub0000> created at line 98.
+    Found 10-bit updown accumulator for signal <onebar_y_reg>.
+    Found 10-bit comparator greatequal for signal <onebar_y_reg$cmp_ge0000> created at line 111.
+    Found 10-bit comparator lessequal for signal <onebar_y_reg$cmp_le0000> created at line 112.
+    Found 10-bit comparator less for signal <onebar_y_reg$cmp_lt0000> created at line 111.
+    Found 10-bit comparator greatequal for signal <twobar_on$cmp_le0000> created at line 100.
+    Found 10-bit comparator lessequal for signal <twobar_on$cmp_le0001> created at line 100.
+    Found 10-bit updown accumulator for signal <twobar_y_reg>.
+    Summary:
+	inferred   4 Accumulator(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred  21 Comparator(s).
+Unit <Graphics> synthesized.
+
+
+Synthesizing Unit <pong_top>.
+    Related source file is "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/pong_top.vhd".
+WARNING:Xst:647 - Input <P1dn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <miss> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <hit> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ball_reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <ball_next> is used but never assigned. This sourceless signal will be automatically connected to value 00.
+    Found 3-bit register for signal <rgb_reg>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <pong_top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 3
+ 10-bit subtractor                                     : 3
+# Counters                                             : 2
+ 32-bit up counter                                     : 2
+# Accumulators                                         : 3
+ 10-bit up accumulator                                 : 2
+ 10-bit updown accumulator                             : 1
+# Registers                                            : 7
+ 1-bit register                                        : 4
+ 10-bit register                                       : 2
+ 3-bit register                                        : 1
+# Comparators                                          : 27
+ 10-bit comparator greatequal                          : 5
+ 10-bit comparator greater                             : 5
+ 10-bit comparator less                                : 3
+ 10-bit comparator lessequal                           : 8
+ 32-bit comparator greatequal                          : 2
+ 32-bit comparator less                                : 2
+ 32-bit comparator lessequal                           : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <Inst_Graphics> is unconnected in block <pong_top>.
+   It will be removed from the design.
+WARNING:Xst:1710 - FF/Latch <rgb_reg_0> (without init value) has a constant value of 0 in block <pong_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rgb_reg_2> (without init value) has a constant value of 0 in block <pong_top>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 3
+ 10-bit subtractor                                     : 3
+# Counters                                             : 2
+ 32-bit up counter                                     : 2
+# Accumulators                                         : 3
+ 10-bit up accumulator                                 : 2
+ 10-bit updown accumulator                             : 1
+# Registers                                            : 27
+ Flip-Flops                                            : 27
+# Comparators                                          : 27
+ 10-bit comparator greatequal                          : 5
+ 10-bit comparator greater                             : 5
+ 10-bit comparator less                                : 3
+ 10-bit comparator lessequal                           : 8
+ 32-bit comparator greatequal                          : 2
+ 32-bit comparator less                                : 2
+ 32-bit comparator lessequal                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <1> in Unit <LPM_DFF_7> is equivalent to the following 7 FFs/Latches, which will be removed : <3> <4> <7> <5> <6> <8> <9> 
+INFO:Xst:2261 - The FF/Latch <3> in Unit <LPM_DFF_4> is equivalent to the following 6 FFs/Latches, which will be removed : <4> <7> <5> <6> <8> <9> 
+WARNING:Xst:1710 - FF/Latch <2> (without init value) has a constant value of 1 in block <LPM_DFF_7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <0> (without init value) has a constant value of 0 in block <LPM_DFF_7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <LPM_DFF_4>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <pong_top> ...
+
+Optimizing unit <VideoController> ...
+
+Optimizing unit <Graphics> ...
+WARNING:Xst:1710 - FF/Latch <rgb_reg_0> (without init value) has a constant value of 0 in block <pong_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rgb_reg_2> (without init value) has a constant value of 0 in block <pong_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_vy_reg_2> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_vy_reg_1> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_vy_reg_3> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_vx_reg_1> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_y_reg_9> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_y_reg_8> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_y_reg_7> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_y_reg_6> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_y_reg_5> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_y_reg_4> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_y_reg_3> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_y_reg_2> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_y_reg_1> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_y_reg_0> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_x_reg_9> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_x_reg_8> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_x_reg_7> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_x_reg_6> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_x_reg_5> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_x_reg_4> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_x_reg_3> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_x_reg_2> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_x_reg_1> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/ball_x_reg_0> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/onebar_y_reg_9> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/onebar_y_reg_8> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/onebar_y_reg_7> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/onebar_y_reg_6> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/onebar_y_reg_5> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/onebar_y_reg_4> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/onebar_y_reg_3> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/onebar_y_reg_2> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/onebar_y_reg_1> of sequential type is unconnected in block <pong_top>.
+WARNING:Xst:2677 - Node <Inst_Graphics/onebar_y_reg_0> of sequential type is unconnected in block <pong_top>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block pong_top, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 69
+ Flip-Flops                                            : 69
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : pong_top.ngr
+Top Level Output File Name         : pong_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 36
+
+Cell Usage :
+# BELS                             : 423
+#      GND                         : 1
+#      INV                         : 18
+#      LUT1                        : 69
+#      LUT2                        : 73
+#      LUT3                        : 3
+#      LUT4                        : 50
+#      MUXCY                       : 144
+#      VCC                         : 1
+#      XORCY                       : 64
+# FlipFlops/Latches                : 69
+#      FDC                         : 35
+#      FDCE                        : 33
+#      FDR                         : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 31
+#      IBUF                        : 1
+#      OBUF                        : 30
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      114  out of   4656     2%  
+ Number of Slice Flip Flops:             69  out of   9312     0%  
+ Number of 4 input LUTs:                213  out of   9312     2%  
+ Number of IOs:                          36
+ Number of bonded IOBs:                  32  out of    232    13%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 2     |
+Inst_VideoController/clk251        | BUFG                   | 67    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 68    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.679ns (Maximum Frequency: 176.073MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.182ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.808ns (frequency: 553.113MHz)
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               1.808ns (Levels of Logic = 0)
+  Source:            Inst_VideoController/clk25 (FF)
+  Destination:       Inst_VideoController/clk25 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Inst_VideoController/clk25 to Inst_VideoController/clk25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.514   0.499  Inst_VideoController/clk25 (Inst_VideoController/clk251)
+     FDR:R                     0.795          Inst_VideoController/clk25
+    ----------------------------------------
+    Total                      1.808ns (1.309ns logic, 0.499ns route)
+                                       (72.4% logic, 27.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_VideoController/clk251'
+  Clock period: 5.679ns (frequency: 176.073MHz)
+  Total number of paths / destination ports: 4310 / 99
+-------------------------------------------------------------------------
+Delay:               5.679ns (Levels of Logic = 33)
+  Source:            Inst_VideoController/vpos_1 (FF)
+  Destination:       Inst_VideoController/vpos_31 (FF)
+  Source Clock:      Inst_VideoController/clk251 rising
+  Destination Clock: Inst_VideoController/clk251 rising
+
+  Data Path: Inst_VideoController/vpos_1 to Inst_VideoController/vpos_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.514   0.651  Inst_VideoController/vpos_1 (Inst_VideoController/vpos_1)
+     LUT1:I0->O            1   0.612   0.000  Inst_VideoController/Mcount_vpos_cy<1>_rt (Inst_VideoController/Mcount_vpos_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  Inst_VideoController/Mcount_vpos_cy<1> (Inst_VideoController/Mcount_vpos_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<2> (Inst_VideoController/Mcount_vpos_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<3> (Inst_VideoController/Mcount_vpos_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<4> (Inst_VideoController/Mcount_vpos_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<5> (Inst_VideoController/Mcount_vpos_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<6> (Inst_VideoController/Mcount_vpos_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<7> (Inst_VideoController/Mcount_vpos_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<8> (Inst_VideoController/Mcount_vpos_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<9> (Inst_VideoController/Mcount_vpos_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<10> (Inst_VideoController/Mcount_vpos_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<11> (Inst_VideoController/Mcount_vpos_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<12> (Inst_VideoController/Mcount_vpos_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<13> (Inst_VideoController/Mcount_vpos_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<14> (Inst_VideoController/Mcount_vpos_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<15> (Inst_VideoController/Mcount_vpos_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<16> (Inst_VideoController/Mcount_vpos_cy<16>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<17> (Inst_VideoController/Mcount_vpos_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<18> (Inst_VideoController/Mcount_vpos_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<19> (Inst_VideoController/Mcount_vpos_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<20> (Inst_VideoController/Mcount_vpos_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<21> (Inst_VideoController/Mcount_vpos_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<22> (Inst_VideoController/Mcount_vpos_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<23> (Inst_VideoController/Mcount_vpos_cy<23>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<24> (Inst_VideoController/Mcount_vpos_cy<24>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<25> (Inst_VideoController/Mcount_vpos_cy<25>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<26> (Inst_VideoController/Mcount_vpos_cy<26>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<27> (Inst_VideoController/Mcount_vpos_cy<27>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<28> (Inst_VideoController/Mcount_vpos_cy<28>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<29> (Inst_VideoController/Mcount_vpos_cy<29>)
+     MUXCY:CI->O           0   0.052   0.000  Inst_VideoController/Mcount_vpos_cy<30> (Inst_VideoController/Mcount_vpos_cy<30>)
+     XORCY:CI->O           1   0.699   0.426  Inst_VideoController/Mcount_vpos_xor<31> (Inst_VideoController/Result<31>1)
+     LUT2:I1->O            1   0.612   0.000  Inst_VideoController/Mcount_vpos_eqn_311 (Inst_VideoController/Mcount_vpos_eqn_31)
+     FDCE:D                    0.268          Inst_VideoController/vpos_31
+    ----------------------------------------
+    Total                      5.679ns (4.603ns logic, 1.077ns route)
+                                       (81.0% logic, 19.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_VideoController/clk251'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            Inst_VideoController/vsync (FF)
+  Destination:       vsync (PAD)
+  Source Clock:      Inst_VideoController/clk251 rising
+
+  Data Path: Inst_VideoController/vsync to vsync
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.514   0.357  Inst_VideoController/vsync (Inst_VideoController/vsync)
+     OBUF:I->O                 3.169          vsync_OBUF (vsync)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.182ns (Levels of Logic = 1)
+  Source:            Inst_VideoController/clk25 (FF)
+  Destination:       DAC_CLK (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Inst_VideoController/clk25 to DAC_CLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.514   0.499  Inst_VideoController/clk25 (Inst_VideoController/clk251)
+     OBUF:I->O                 3.169          DAC_CLK_OBUF (DAC_CLK)
+    ----------------------------------------
+    Total                      4.182ns (3.683ns logic, 0.499ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.23 secs
+ 
+--> 
+
+
+Total memory usage is 644780 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   53 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

@@ -1,0 +1,3 @@
+vhdl work "../../SVGP/VideoController.vhd"
+vhdl work "../../SVGP/Graphics.vhd"
+vhdl work "../../SVGP/pong_top.vhd"

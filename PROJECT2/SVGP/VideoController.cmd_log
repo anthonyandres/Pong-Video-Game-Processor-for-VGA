@@ -1,0 +1,44 @@
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraint.ucf -p xc3s500e-vq100-5 "VideoController.ngc" VideoController.ngd  
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraint.ucf -p xc3s500e-vq100-5 "VideoController.ngc" VideoController.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraint.ucf -p xc3s500e-vq100-5 "VideoController.ngc" VideoController.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraint.ucf -p xc3s500e-vq100-5 "VideoController.ngc" VideoController.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraint.ucf -p xc3s500e-vq100-5 "VideoController.ngc" VideoController.ngd  
+map -intstyle ise -p xc3s500e-vq100-5 -cm area -ir off -pr off -c 100 -o VideoController_map.ncd VideoController.ngd VideoController.pcf 
+par -w -intstyle ise -ol high -t 1 VideoController_map.ncd VideoController.ncd VideoController.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VideoController.twx VideoController.ncd -o VideoController.twr VideoController.pcf -ucf constraint.ucf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraint.ucf -p xc3s500e-vq100-5 "VideoController.ngc" VideoController.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraint.ucf -p xc3s500e-vq100-5 "VideoController.ngc" VideoController.ngd  
+vhdtdtfi -lib work VideoController.vhd -prj SVGP -o VideoController.spl -module VideoController -template /CMC/tools/xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e VideoController.spl {/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.sym} 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraint.ucf -p xc3s500e-vq100-5 "VideoController.ngc" VideoController.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-5 "VideoController.ngc" VideoController.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc3s500e-vq100-5 "VideoController.ngc" VideoController.ngd  
+map -intstyle ise -p xc3s500e-vq100-5 -cm area -ir off -pr off -c 100 -o VideoController_map.ncd VideoController.ngd VideoController.pcf 
+vhdtdtfi -prj SVGP -o "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.vhi" -module VideoController -template /CMC/tools/xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work VideoController.vhd 
+vhdtdtfi -prj SVGP -o "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.vhi" -module VideoController -template /CMC/tools/xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work VideoController.vhd 
+vhdtdtfi -prj SVGP -o "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.vhi" -module VideoController -template /CMC/tools/xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work VideoController.vhd 
+vhdtdtfi -lib work VideoController.vhd -prj SVGP -o VideoController.spl -module VideoController -template /CMC/tools/xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e VideoController.spl {/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.sym} 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc3s500e-fg320-5 "VideoController.ngc" VideoController.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o VideoController_map.ncd VideoController.ngd VideoController.pcf 
+par -w -intstyle ise -ol high -t 1 VideoController_map.ncd VideoController.ncd VideoController.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VideoController.twx VideoController.ncd -o VideoController.twr VideoController.pcf 
+bitgen -intstyle ise -f VideoController.ut VideoController.ncd 

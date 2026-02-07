@@ -1,0 +1,3 @@
+vhdl work "VideoController.vhd"
+vhdl work "Graphics.vhd"
+vhdl work "pong_top.vhd"

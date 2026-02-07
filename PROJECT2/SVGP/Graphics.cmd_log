@@ -1,0 +1,5 @@
+vhdtdtfi -lib work Graphics.vhd -prj SVGP -o Graphics.spl -module Graphics -template /CMC/tools/xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Graphics.spl {/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/Graphics.sym} 
+vhdtdtfi -prj SVGP -o "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/Graphics.vhi" -module Graphics -template /CMC/tools/xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Graphics.vhd 
+vhdtdtfi -prj SVGP -o "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/Graphics.vhi" -module Graphics -template /CMC/tools/xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Graphics.vhd 
+vhdtdtfi -prj SVGP -o "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/Graphics.vhi" -module Graphics -template /CMC/tools/xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Graphics.vhd 

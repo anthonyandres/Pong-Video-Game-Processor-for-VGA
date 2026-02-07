@@ -1,0 +1,12 @@
+AR bitgen behavioral "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/bitGen.vhd" sub00/vhpl11 1700849184
+EN vgaclk NULL "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VGAclk.vhd" sub00/vhpl00 1700447268
+AR sync behavioral "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/sync.vhd" sub00/vhpl03 1700447271
+EN graphics NULL "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/Graphics.vhd" sub00/vhpl06 1700849229
+EN bitgen NULL "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/bitGen.vhd" sub00/vhpl10 1700849183
+EN sync NULL "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/sync.vhd" sub00/vhpl02 1700447270
+AR pong_top behavioral "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/pong_top.vhd" sub00/vhpl09 1700847809
+EN videocontroller NULL "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.vhd" sub00/vhpl04 1700849227
+EN pong_top NULL "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/pong_top.vhd" sub00/vhpl08 1700849231
+AR graphics behavioral "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/Graphics.vhd" sub00/vhpl07 1700849230
+AR videocontroller behavioral "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VideoController.vhd" sub00/vhpl05 1700849228
+AR vgaclk behavioral "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/VGAclk.vhd" sub00/vhpl01 1700447269

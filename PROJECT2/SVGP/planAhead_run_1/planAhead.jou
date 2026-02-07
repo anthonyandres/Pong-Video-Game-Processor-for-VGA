@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# PlanAhead v13.4 (64-bit)
+# Build 157570 by hdbuild on Fri Dec 16 12:49:33 MST 2011
+# Start of session at: Fri Nov 24 12:45:40 2023
+# Process ID: 1413
+# Log file: /home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/planAhead_run_1/planAhead.log
+# Journal file: /home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/pa.fromNetlist.tcl}
+exit
+stop_gui

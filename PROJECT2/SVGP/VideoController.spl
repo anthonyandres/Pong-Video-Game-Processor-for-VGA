@@ -1,0 +1,9 @@
+[Inputs]
+clk
+rst
+[Outputs]
+video_on
+clk_25
+vsync
+hsync
+[BiDir]

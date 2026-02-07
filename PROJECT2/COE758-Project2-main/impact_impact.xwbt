@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/COE758-Project2-main/impact.xsl
+OUTFILE=/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/COE758-Project2-main/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/COE758-Project2-main
+LICENSE=iMPACT
+USER_INFO=iMPACT

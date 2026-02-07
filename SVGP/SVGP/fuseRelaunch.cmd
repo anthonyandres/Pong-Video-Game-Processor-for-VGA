@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/student1/aaandres/Desktop/COE758 Labs/SVGP/SVGP/pongTest_isim_beh.exe" -prj "/home/student1/aaandres/Desktop/COE758 Labs/SVGP/SVGP/pongTest_beh.prj" "work.pongTest" 

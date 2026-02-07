@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGPEX/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGPEX/VideoController.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 "VideoController.ngc" VideoController.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o VideoController_map.ncd VideoController.ngd VideoController.pcf 
+par -w -intstyle ise -ol high -t 1 VideoController_map.ncd VideoController.ncd VideoController.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VideoController.twx VideoController.ncd -o VideoController.twr VideoController.pcf 
+bitgen -intstyle ise -f VideoController.ut VideoController.ncd 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGPEX/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGPEX/VideoController.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 "VideoController.ngc" VideoController.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o VideoController_map.ncd VideoController.ngd VideoController.pcf 
+par -w -intstyle ise -ol high -t 1 VideoController_map.ncd VideoController.ncd VideoController.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VideoController.twx VideoController.ncd -o VideoController.twr VideoController.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f VideoController.ut VideoController.ncd 
+xst -intstyle ise -ifn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGPEX/VideoController.xst" -ofn "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGPEX/VideoController.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-5 "VideoController.ngc" VideoController.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o VideoController_map.ncd VideoController.ngd VideoController.pcf 
+par -w -intstyle ise -ol high -t 1 VideoController_map.ncd VideoController.ncd VideoController.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VideoController.twx VideoController.ncd -o VideoController.twr VideoController.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f VideoController.ut VideoController.ncd 

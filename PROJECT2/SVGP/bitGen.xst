@@ -1,0 +1,5 @@
+set -tmpdir "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/xst/projnav.tmp"
+set -xsthdpdir "/home/student1/aaandres/Desktop/COE758 Labs/PROJECT2/SVGP/xst"
+elaborate
+-ifn bitGen.prj
+-ifmt mixed
