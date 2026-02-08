@@ -78,6 +78,6 @@ First HSync “H” active low signal occurs at time 13,050 ns, period between H
 First VSync “V” active low signal occurs at time 7824us. 7824/16 = 489 ~=480. 480 is the number of horizontal retraces or HSync signals that need to occur before vertical retrace or a VSync signal occurs.
 
 ## Code Breakdown
-I will include a walkthrough of the [pong.vhd](https://github.com/anthonyandres/Pong-Video-Game-Processor-for-VGA/blob/main/SVGP/SVGP/pong.vhd) file used where a majority of the game logic occurs
+I will include a walkthrough of the various .vhd files such as the [pong.vhd](https://github.com/anthonyandres/Pong-Video-Game-Processor-for-VGA/blob/main/SVGP/SVGP/pong.vhd) file where a majority of the game logic occurs
 
 
