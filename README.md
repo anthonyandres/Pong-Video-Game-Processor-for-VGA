@@ -1,7 +1,7 @@
 # Pong Video Game Processor for VGA
 
 
-[pong image]()
+![pong image](https://github.com/anthonyandres/Pong-Video-Game-Processor-for-VGA/blob/main/SVGP/VGAPongDemo.jpg)
 
 
 ## Preface
@@ -64,5 +64,19 @@ Table 4. Vertical VGA Parameters
 |     Front Porch    |        10        | 
 |     Sync Pulse     |        2         | 
 |     Back Porch     |        33        | 
-| Display Image Area |        480       | 
+| Display Image Area |        480       |
+
+### Timing Diagrams
+
+![timing1](https://github.com/anthonyandres/Pong-Video-Game-Processor-for-VGA/blob/main/SVGP/50MHz%20clock%20(top)%20and%2025MHz%20clock%20(bottom).png)
+Timing diagram showcasing 50Mhz on board clock signal “clk” and derived 25MHz clock signal “DAC_CLOCK”
+
+![timing2](https://github.com/anthonyandres/Pong-Video-Game-Processor-for-VGA/blob/main/SVGP/hsync%20occurs%20at%2013us.png)
+First HSync “H” active low signal occurs at time 13,050 ns, period between HSync signals is 16us
+
+![timing3](https://github.com/anthonyandres/Pong-Video-Game-Processor-for-VGA/blob/main/SVGP/vsync%20occurs%20at%207824.png)
+First VSync “V” active low signal occurs at time 7824us. 7824/16 = 489 ~=480. 480 is the number of horizontal retraces or HSync signals that need to occur before vertical retrace or a VSync signal occurs.
+
+
+
 
