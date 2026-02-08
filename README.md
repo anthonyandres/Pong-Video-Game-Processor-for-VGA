@@ -1,7 +1,7 @@
 # Pong Video Game Processor for VGA
 
 
-[pong image]()
+![pong image](https://github.com/anthonyandres/Pong-Video-Game-Processor-for-VGA/blob/main/SVGP/VGAPongDemo.jpg)
 
 
 ## Preface
